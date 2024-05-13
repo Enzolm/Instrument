@@ -3,12 +3,12 @@
 
 ## __API__
 
-- npm i
+- npm -i
 - npm run dev
 
 
 ## __REACT__
 
-npm -i
+- npm -i
 - npm run dev
 
