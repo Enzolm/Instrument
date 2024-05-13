@@ -1,6 +1,5 @@
     import React, { useState, useEffect } from "react";
-    import { useNavigate } from 'react-router-dom'
-    import Edit from "./Edite";
+    import { NavLink, useNavigate } from 'react-router-dom'
 
     function Affichage() {
         const [instruments, setInstruments] = useState([]);
@@ -18,14 +17,15 @@
 
         return (
             <>
-                <h1>Liste des Instruments</h1>
+                <h1 className=" mb-5  font-bold">Liste des Instruments</h1>
                 {instruments.map((instrument) => (
-                    <div key={instrument.Id_instrument}>
+                    <div className=" flex" key={instrument.Id_instrument}>
                         <hr />
                         <h2>{instrument.Nom}</h2>
                         <p>{instrument.Categorie}</p>
-                        <p>{instrument.prix}€</p>
-                        <button onClick={() => console.log(instrument.Id_instrument)}>Modifier</button>
+                        <p>{instrument.Prix}€</p>
+                        <NavLink to={`/edit/${instrument.Id_instrument}`}>Modifier             </NavLink>
+                        <NavLink to={`/delete/${instrument.Id_instrument}`}>                              Supprimer</NavLink>
                         <hr />
                     </div>
                 ))}

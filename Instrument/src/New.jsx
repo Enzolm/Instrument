@@ -58,7 +58,6 @@ function New() {
 
     const navigate = useNavigate();
     const navigatehome = () => {
-        // 👇️ Navigate to /contacts
         navigate('/');
       };
 
