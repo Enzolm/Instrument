@@ -73,7 +73,7 @@ function Edit() {
 
 
             <div>
-                <h1>{instrument.Nom}</h1>
+                <h1>Modifier l'instrument</h1>
             </div>
             <div>
                 <input onInput={(e)=>handleNewValue(e)} name="Nom" value={instrument.Nom} type="text" placeholder="Nom de l'instrument" />
